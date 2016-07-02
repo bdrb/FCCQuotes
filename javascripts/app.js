@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(document).ready(function () {    
     $("#getQuote").on('click', function () {
         $("#res1").text("newQuote.quote");
         WikiquoteApi.openSearch("George Washington",
-            function (results) {
+            function (results) {                
                 $("msg").text(results[0]);
                 // Get quote
                 WikiquoteApi.getRandomQuote($("msg").text(),
