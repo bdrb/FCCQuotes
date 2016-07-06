@@ -9,41 +9,52 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="javascripts/wikiquote-api.js"></script>
     <script src="javascripts/app.js"></script>
+    <style>
+      body{margin:0;}
+      .page-header{background-color: #f5f5f5;}
+      .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+    </style>
   </head>
-  <body>
+  <header class = "page-header container-fluid">
+    <!--<div class = "jumbotron">-->
+	    <h2 class = "text-center text-info">Quote mashine</h3>
+	    <h4 class = "text-center text-warning">the simplest way to get a random quote - type a name and press the button!</h5> 
+      <!--</div>-->
+  </header>
+  <main class = "container-fluid">
     <div class="container">
-      <div class = "jumbotron">
-	    <h3>Quote mashine</h3>
-	    <h5>the simplest way to get a random quote - type a name and press the button!</h5> 
-      </div>
       <div class = "row">
-    	<div class = "col-md-2"></div>
-	    <div class = "col-md-8">
-          <form class="form-horizontal" role = "form" >
-            <div class="form-group">
-              <label for="query-title">Name:</label>
-              <input id="query-title" type="text"/>
-              <button id = "getQuote" class = "btn btn-primary">
-                Get Quote
-              </button>
-            </div>
-          </form>
+    	  <div class = "col-md-4">
+            <label for="query-title" class = "text-info">Type name:</label>
+            <input id="query-title" type="text" class = "input-sm"/>
+            <button id = "get-quote" class = "btn btn-default btn-sm">
+              get quote
+            </button>
         </div>
-        <div class = "col-md-2"></div>
-       </div>
-      <div class = "row">
-        <div class = "col-md-2"></div>
-	    <div class = "col-md-8">
+        <div class = "col-md-8">
           <blockquote>
-            <p id = "res" ></p>
+            <p id = "quote" ></p>
             <footer id = "author"></footer>
           </blockquote>
+          <a id = "tweet" class="twitter-share-button"
+             href="https://twitter.com/intent/tweet?text=Hello%20world">
+            Tweet</a>
 	    </div>
-        <div class = "col-md-2"></div>
        </div>
 	 </div>
     </div>
-  </body>
+  </main>
+  <footer class="footer panel-footer container-fluid">
+    <div class = "text-center text-muted">powered by <a href = "https://wikiquote.org">wikiquote.org</a> and <a href = "https://github.com/natetyler/wikiquotes-api">natetyler's wikiquotes-api</a></div>
+  </footer>
+  
 </html>
 
 
